@@ -5,6 +5,9 @@
 // ============ PART 1: ARRAY FUNCTIONS ============
 const numbers = [10, 5, 8, 12, 3, 7, 15, 2, 9, 6];
 
+
+// returns sum of numbers in an array
+// param: array of integers
 function sum(arr) {
     let sum = 0;
     for (let i=0; i<arr.length; i++){
@@ -13,28 +16,42 @@ function sum(arr) {
     return sum
 }
 
+
+// returns averge of values in an array
+// param: array of integers
 function average(arr) {
     return (sum(arr) / arr.length)
 }
 
+// returns the smallest value in an array
+// param: array of integers
 function min(arr) {
     return Math.min(...arr)
 }
 
+// returns the largest value in an array
+// param: array of integers
 function max(arr) {
   return Math.max(...arr)
 }
 
 // ============ PART 2: STRING FUNCTIONS ============
+
+// returns string with first value capitalized
+// param: non-empty string
 function capitalize(str) {
     const firstLetter = str.charAt(0).toUpperCase()
     return firstLetter + str.slice(1)
 }
 
+// returns reverse of a string
+// param: non-empty string
 function reverse(str) {
   return (str.split("").reverse().join(""))
 }
 
+// returns vowel count of a string
+// param: non-empty string
 function countVowels(str) {
   const vowels = ['a', 'e', 'i', 'o', 'u']
   let vowelCount = 0
@@ -51,10 +68,11 @@ const student = {
   age: 20,
   grades: [85, 92, 78, 90, 88],
   
+  // returns average of a student object's grades
   getAverage: function() {
     return average(this.grades)
   },
-  
+  // returns true if student object's grade average is above 85; false otherwise
   isHonorRoll: function() {
     return this.getAverage() > 85
   }
