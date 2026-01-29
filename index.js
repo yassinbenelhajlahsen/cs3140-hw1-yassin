@@ -27,19 +27,22 @@ function max(arr) {
 
 // ============ PART 2: STRING FUNCTIONS ============
 function capitalize(str) {
-  // TODO: Return string with first letter capitalized
-  // "hello" -> "Hello"
+    const firstLetter = str.charAt(0).toUpperCase()
+    return firstLetter + str.slice(1)
 }
 
 function reverse(str) {
-  // TODO: Return the string reversed
-  // "hello" -> "olleh"
-  // Hint: str.split("").reverse().join("")
+  return (str.split("").reverse().join(""))
 }
 
 function countVowels(str) {
-  // TODO: Return count of vowels (a, e, i, o, u)
-  // "hello" -> 2
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  let vowelCount = 0
+  for(let i=0; i<str.length; i++){
+    if (vowels.includes(str.charAt(i))) vowelCount++ 
+  }
+
+  return vowelCount
 }
 
 // ============ PART 3: OBJECT ============
