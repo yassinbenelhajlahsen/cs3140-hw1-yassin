@@ -52,7 +52,7 @@ const student = {
   grades: [85, 92, 78, 90, 88],
   
   getAverage: function() {
-    return sum(this.grades)
+    return average(this.grades)
   },
   
   isHonorRoll: function() {
